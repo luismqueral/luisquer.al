@@ -1,0 +1,34 @@
+TeacherQuest is a professional development workshop for educators geared towards helping teachers design games for their classrooms. It's an initiative under the Institute of Play, a 
+
+The TeacherQuest team came to Blenderbox looking for a way to translate their in-person workshops into an online experience. In turn, we developed a scalable Rails application that turned their vision into a reality.
+
+I served as the lead user-experience designer for the project, along side a developer and a visual designer.
+
+How TeacherQuest Works
+The online teacherquest experience is simular to that of a call and response. TeacherQuest administrations post game-making challenges to their "Cohorts" ( small group of local participants), and the users would then reply with creative responses.
+
+There are two different types of administrator-created challenges:
+
+PlayQuicks - Short, weekly challenges that are designed to take no longer than a few hours.
+
+Design Challenges - In-depth, Bi-Monthly challenges that teachers are required to build upon and test in their classrooms
+
+These two types of content are the centerpiece of TeacherQuest experience, and we designed the application to center around these challenges.
+
+
+---- CONTENTS ----
+Intro/Background
+How TeacherQuest Works
+Dashboard
+PlayQuicks
+Design Challenges
+Commenting
+
+Admin Back-End
+Creating a Cohort
+Authoring a PlayQuick
+Authoring a Design Challenge
+
+Homepage
+
+What I learned

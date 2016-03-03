@@ -1,0 +1,958 @@
+@charset "UTF-8";
+/* ---- body ---- */
+* {
+  box-sizing: border-box;
+  text-rendering: optimizelegibility; }
+
+body {
+  background-color: #fff;
+  color: #222;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Tiempos", Georgia, Times, Serif;
+  font-size: 18px;
+  line-height: 180%; }
+
+/* ---- typography ---- */
+@font-face {
+  font-family: 'Apercu Mono';
+  src: url("fonts/apercu-mono-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/apercu-mono-webfont.woff") format("woff"); }
+@font-face {
+  font-family: 'fontello';
+  src: url("fonts/icon.eot?7480167");
+  src: url("fonts/icon.eot?7480167#iefix") format("embedded-opentype"), url("fonts/icon.woff?7480167") format("woff"), url("fonts/icon.ttf?7480167") format("truetype"), url("fonts/icon.svg?7480167#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Tiempos Headline';
+  src: url("fonts/TiemposHeadlineWeb-Medium.eot") format("embedded-opentype"), url("fonts/TiemposHeadlineWeb-Medium.woff") format("woff"); }
+@font-face {
+  font-family: 'Tiempos Headline Light';
+  src: url("fonts/TiemposHeadlineWeb-Light.eot") format("embedded-opentype"), url("fonts/TiemposHeadlineWeb-Light.woff") format("woff"); }
+@font-face {
+  font-family: 'Tiempos';
+  src: url("fonts/TiemposWebLF-Regular.eot") format("embedded-opentype"), url("fonts/TiemposWebLF-Regular.woff") format("woff"); }
+@font-face {
+  font-family: 'Tiempos Bold';
+  src: url("fonts/TiemposWebLF-Semibold.eot") format("embedded-opentype"), url("fonts/TiemposWebLF-Semibold.woff") format("woff"); }
+@font-face {
+  font-family: 'Inconsolata';
+  src: url("fonts/inconsolata.eot") format("embedded-opentype"), url("fonts/inconsolata.woff") format("woff"); }
+pre, code {
+  font-family: "inconsolata", courier, monospace !important;
+  font-size: 18px !important;
+  line-height: 1.7; }
+
+.highlight {
+  padding: 3px 5px;
+  border-radius: 3px;
+  /* colors */ }
+  .highlight.blue {
+    background-color: blue; }
+  .highlight.yellow {
+    background-color: #ffff9e; }
+  .highlight.green {
+    background-color: green; }
+  .highlight.gray {
+    background-color: rgba(0, 0, 0, 0.09); }
+
+/* ---- colors ---- */
+/* ---- links ---- */
+a {
+  color: gray;
+  text-decoration: none; }
+
+a:hover {
+  border-bottom: dotted 1px gray; }
+
+/* ---- content ---- */
+img.full-width {
+  width: 100%; }
+
+/* ---- misc ---- */
+.note {
+  border-radius: 2px;
+  border: 1px solid lightgray;
+  background-color: #FFFC9E;
+  color: #000;
+  font-size: 12px;
+  max-width: 600px;
+  margin: 15px auto;
+  text-align: left;
+  padding: 0 10px; }
+
+.divider {
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 15px 0; }
+
+.quote {
+  border-left: 5px solid #333;
+  font-family: "Tiempos Headline Light", Georgia, Times, serif;
+  padding: 0 0 0 20px;
+  margin-left: 10px;
+  color: #000;
+  opacity: 0.47;
+  font-size: 22px;
+  line-height: 1.5; }
+
+/* browser window */
+.browser {
+  padding: 20px 0 0;
+  border-radius: 3px;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #ddd;
+  border-bottom: 2px solid #ccc;
+  background: #ddd;
+  display: inline-block;
+  position: relative;
+  line-height: 0; }
+  .browser .frame {
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 1px; }
+  .browser span {
+    height: 8px;
+    width: 8px;
+    border-radius: 8px;
+    background-color: #eee;
+    border: 1px solid #dadada;
+    float: left;
+    margin: 0 0 0 4px; }
+  .browser img {
+    background-color: #fff; }
+
+/* responsive youtube videos */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+  .embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/* ---- section styles ---- */
+.section-wrapper {
+  max-width: 880px;
+  margin: 25px auto;
+  padding: 15px 20px; }
+
+section {
+  margin: 0 auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* intro section */
+  /* "featured" and "other" sections */ }
+  section .header-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/header-icon.png);
+    background-size: cover;
+    margin: 0 auto 15px auto; }
+  section.intro {
+    font-size: 30px;
+    margin: 55px auto 70px auto;
+    max-width: 690px;
+    border: none;
+    line-height: 175%;
+    padding: 0 25px;
+    font-family: Tiempos Headline Light;
+    font-wieght: 100;
+    color: rgba(0, 0, 0, 0.85); }
+    section.intro a {
+      text-decoration: none;
+      border-bottom: 3px solid rgba(0, 0, 0, 0.04);
+      color: rgba(0, 0, 0, 0.85);
+      padding: 0 0 5px 0; }
+    section.intro a:visited {
+      color: black; }
+    section.intro a:hover {
+      border-bottom: 3px solid rgba(0, 0, 0, 0.85);
+      padding: 0 0 5px 0;
+      -o-transition: .2s;
+      -ms-transition: .2s;
+      -moz-transition: .2s;
+      -webkit-transition: .2s;
+      /* ...and now for the proper property */
+      transition: .2s; }
+  section.work {
+    color: #bbb;
+    font-size: 15px; }
+  section aside {
+    width: 25%;
+    color: #bbb;
+    font-size: 15px;
+    margin: 10px 0 0 0; }
+
+/* ---- featured project styles ---- */
+.project-wrapper {
+  max-width: 75%;
+  float: right; }
+  .project-wrapper a:hover {
+    border: none; }
+
+.featured-project {
+  width: 49%;
+  display: inline-table;
+  margin-bottom: 1rem;
+  padding: .7em;
+  border: 1px solid transparent;
+  height: 275px;
+  /* links */
+  /* content */ }
+  .featured-project:hover {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.01);
+    -o-transition: .1s;
+    -ms-transition: .1s;
+    -moz-transition: .1s;
+    -webkit-transition: .1s;
+    /* ...and now for the proper property */
+    transition: .1s; }
+  .featured-project .thumb {
+    height: 170px;
+    width: 100%;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    border: 0;
+    display: block; }
+  .featured-project .title {
+    padding: 10px 0 0 0;
+    font-family: "Tiempos Headline Light"; }
+  .featured-project .description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #bbb; }
+
+/* featured  links */
+a .featured-project {
+  color: black;
+  text-decoration: none; }
+
+/* ---- other work ---- */
+.tablelist {
+  width: 75%;
+  float: right;
+  /* links */
+  /* row styles */ }
+  .tablelist a {
+    color: black;
+    text-decoration: none; }
+  .tablelist a:hover .title {
+    color: red; }
+  .tablelist .project-row {
+    border-bottom: solid 1px #eee;
+    padding: 10px; }
+    .tablelist .project-row:hover {
+      background-color: rgba(0, 0, 0, 0.01); }
+    .tablelist .project-row .title {
+      display: inline-block;
+      max-width: 70%; }
+    .tablelist .project-row .date {
+      display: inline-block;
+      float: right;
+      font-size: 13px;
+      color: #bbb;
+      font-family: "inconsolata", courier, monospace; }
+
+/* ---- footer ---- */
+footer {
+  height: 70px;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  font-family: "inconsolata", courier, monospace;
+  line-height: 1.7;
+  margin: 0 0 20px 0; }
+  footer a {
+    color: gray;
+    text-decoration: none; }
+  footer a:hover {
+    color: gray;
+    border-bottom: 1px dotted; }
+
+/* ---- mobile styles ---- */
+@media (max-width: 640px) {
+  section.intro {
+    font-size: 25px;
+    line-height: 1.6;
+    margin: 40px 0 0 0;
+    padding: 0 30px; }
+
+  section aside {
+    display: block;
+    width: auto;
+    width: 100%; }
+
+  .project-wrapper {
+    max-width: 100%;
+    margin: 10px 0 0 0; }
+
+  .tablelist {
+    width: 100%;
+    margin: 10px 0 0 0; } }
+@media (max-width: 500px) {
+  section.intro {
+    font-size: 25px;
+    line-height: 1.6; }
+
+  .section-wrapper {
+    padding: 15px 10px; }
+
+  .featured-project {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0; }
+    .featured-project .featured-project-details {
+      width: 50%;
+      padding: 0 0 0 20px;
+      float: right; }
+    .featured-project .project-description {
+      display: block;
+      padding: 0 -10px 0 0; }
+    .featured-project img {
+      width: 50%; }
+    .featured-project .thumb {
+      width: 50%;
+      display: inline-block; } }
+/* ---- containers ---- */
+.project-contain {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* projects  */
+  /* project links  */
+  /* project description  */
+  /* link back  */ }
+  .project-contain .project-title {
+    font-size: 35px;
+    opacity: .9;
+    text-align: center;
+    margin: 50px auto 10px auto;
+    line-height: 1;
+    font-family: "Tiempos Headline", "Tiempos", Georgia, Times, Serif; }
+  .project-contain .project-title-img {
+    text-align: center;
+    margin: 15px auto 15px auto;
+    opacity: 1; }
+  .project-contain .project-links {
+    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    font-family: "inconsolata", courier, monospace; }
+  .project-contain .project-description {
+    max-width: 750px;
+    margin: 0 auto; }
+    .project-contain .project-description h2 {
+      border-bottom: 0px solid rgba(0, 0, 0, 0.15);
+      margin: 45px 0 0 0;
+      font-family: "Tiempos Headline", "Tiempos", Georgia, Times, Serif;
+      font-weight: 100; }
+    .project-contain .project-description a {
+      color: #338ea9;
+      text-decoration: none; }
+  .project-contain .project-linkback {
+    text-align: center;
+    padding: 25px;
+    font-family: "inconsolata", courier, monospace;
+    font-size: 15px; }
+    .project-contain .project-linkback a {
+      color: rgba(0, 0, 0, 0.45); }
+
+/* ---- misc project styles ---- */
+/* drugs of craigslist */
+.project-title.drugs-of-craigslist {
+  color: black;
+  margin: 60px auto 30px auto;
+  font-size: 60px;
+  font-family: simsun; }
+
+.project-contain.drugs-of-craigslist {
+  max-width: 1000px; }
+  .project-contain.drugs-of-craigslist .browser {
+    margin: 30px auto; }
+
+.project-title.gloves-of-new-york {
+  font-size: 40px;
+  margin: 60px auto 30px auto;
+  font-family: "inconsolata", monospace; }
+
+.project-contain.gloves-of-new-york {
+  max-width: 1000px; }
+  .project-contain.gloves-of-new-york .browser {
+    margin: 30px auto; }
+
+/* cafe internet */
+.project-title.cafe-internet {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  font-style: italic; }
+
+.project-links.cafe-internet {
+  font-family: "inconsolata", courier, monospace; }
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+* 1. Set default font family to sans-serif.
+* 2. Prevent iOS text size adjust after orientation change, without disabling
+*    user zoom.
+*/
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+* Remove default margin.
+*/
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+  ========================================================================== */
+/**
+* Correct `block` display not defined for any HTML5 element in IE 8/9.
+* Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+* Correct `block` display not defined for `main` in IE 11.
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+* 1. Correct `inline-block` display not defined in IE 8/9.
+* 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+*/
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+* Prevent modern browsers from displaying `audio` without controls.
+* Remove excess height in iOS 5 devices.
+*/
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+* Address `[hidden]` styling not present in IE 8/9/10.
+* Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+*/
+[hidden],
+template {
+  display: none; }
+
+/* Links
+  ========================================================================== */
+/**
+* Remove the gray background color from active links in IE 10.
+*/
+a {
+  background: transparent; }
+
+/**
+* Improve readability when focused and also mouse hovered in all browsers.
+*/
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+  ========================================================================== */
+/**
+* Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+*/
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+* Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+*/
+b,
+strong {
+  font-weight: bold; }
+
+/**
+* Address styling not present in Safari and Chrome.
+*/
+dfn {
+  font-style: italic; }
+
+/**
+* Address variable `h1` font-size and margin within `section` and `article`
+* contexts in Firefox 4+, Safari, and Chrome.
+*/
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+* Address styling not present in IE 8/9.
+*/
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+* Address inconsistent and variable font size in all browsers.
+*/
+small {
+  font-size: 80%; }
+
+/**
+* Prevent `sub` and `sup` affecting `line-height` in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+  ========================================================================== */
+/**
+* Remove border when inside `a` element in IE 8/9/10.
+*/
+img {
+  border: 0; }
+
+/**
+* Correct overflow not hidden in IE 9/10/11.
+*/
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+  ========================================================================== */
+/**
+* Address margin not present in IE 8/9 and Safari.
+*/
+figure {
+  margin: 1em 40px; }
+
+/**
+* Address differences between Firefox and other browsers.
+*/
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+* Contain overflow in all browsers.
+*/
+pre {
+  overflow: auto; }
+
+/**
+* Address odd `em`-unit font size rendering in all browsers.
+*/
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+  ========================================================================== */
+/**
+* Known limitation: by default, Chrome and Safari on OS X allow very limited
+* styling of `select`, unless a `border` property is set.
+*/
+/**
+* 1. Correct color not being inherited.
+*    Known issue: affects color of disabled elements.
+* 2. Correct font properties not being inherited.
+* 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+* Address `overflow` set to `hidden` in IE 8/9/10/11.
+*/
+button {
+  overflow: visible; }
+
+/**
+* Address inconsistent `text-transform` inheritance for `button` and `select`.
+* All other form control elements do not inherit `text-transform` values.
+* Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+* Correct `select` style inheritance in Firefox.
+*/
+button,
+select {
+  text-transform: none; }
+
+/**
+* 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+*    and `video` controls.
+* 2. Correct inability to style clickable `input` types in iOS.
+* 3. Improve usability and consistency of cursor style between image-type
+*    `input` and others.
+*/
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+* Re-set default cursor for disabled elements.
+*/
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+* Remove inner padding and border in Firefox 4+.
+*/
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+* Address Firefox 4+ setting `line-height` on `input` using `!important` in
+* the UA stylesheet.
+*/
+input {
+  line-height: normal; }
+
+/**
+* It's recommended that you don't attempt to style these elements.
+* Firefox's implementation doesn't respect box-sizing, padding, or width.
+*
+* 1. Address box sizing set to `content-box` in IE 8/9/10.
+* 2. Remove excess padding in IE 8/9/10.
+*/
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+* Fix the cursor style for Chrome's increment/decrement buttons. For certain
+* `font-size` values of the `input`, it causes the cursor style of the
+* decrement button to change from `default` to `text`.
+*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+* 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+* 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+*    (include `-moz` to future-proof).
+*/
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+* Remove inner padding and search cancel button in Safari and Chrome on OS X.
+* Safari (but not Chrome) clips the cancel button when the search input has
+* padding (and `textfield` appearance).
+*/
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+* Define consistent border, margin, and padding.
+*/
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+* 1. Correct `color` not being inherited in IE 8/9/10/11.
+* 2. Remove padding so people aren't caught out if they zero out fieldsets.
+*/
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+* Remove default vertical scrollbar in IE 8/9/10/11.
+*/
+textarea {
+  overflow: auto; }
+
+/**
+* Don't inherit the `font-weight` (applied by a rule above).
+* NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+*/
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+  ========================================================================== */
+/**
+* Remove most spacing between table cells.
+*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/* ==========================================================================
+base styles
+========================================================================== */
+/* HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+Media Queries
+========================================================================== */
+/* ==========================================================================
+Helper classes
+========================================================================== */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1;
+  clear: both; }
+
+/* ==========================================================================
+Print styles
+========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+@font-face {
+  font-family: 'icon';
+  src: url("fonts/icon.eot?24738968");
+  src: url("fonts/icon.eot?24738968#iefix") format("embedded-opentype"), url("fonts/icon.woff?24738968") format("woff"), url("fonts/icon.ttf?24738968") format("truetype"), url("fonts/icon.svg?24738968#icon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'icon';
+    src: url('../font/icon.svg?24738968#icon') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.45);
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-link-ext:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-download:before {
+  content: '\e801'; }
+
+/* '' */
+.icon-link-ext-alt:before {
+  content: '\e802'; }
+
+/* '' */
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,178 @@
+/* ---- section styles ---- */
+
+.section-wrapper {
+  max-width: 880px;
+  margin: 25px auto;
+  padding: 15px 20px;
+}
+
+section {
+  margin: 0 auto;
+  border-top: 1px solid rgba(0,0,0,0.1);
+
+  .header-icon {
+    width: 50px;
+    height:50px;
+    background-image: url(img/header-icon.png);
+    background-size: cover;
+    margin: 0 auto 15px auto;
+  }
+
+  /* intro section */
+  &.intro {
+    font-size: 30px;
+    margin: 55px auto 70px auto;
+    max-width: 690px;
+    border: none;
+    line-height: 175%;
+    padding: 0 25px;
+    font-family: Tiempos Headline Light;
+    font-wieght: 100;
+    color: rgba(0,0,0,0.85);
+
+    & a {
+      text-decoration: none;
+      border-bottom: 3px solid rgba(0,0,0,0.04);
+      color: rgba(0,0,0,0.85);
+      padding: 0 0 5px 0;}
+    & a:visited {color: black;}
+    & a:hover {
+      border-bottom: 3px solid rgba(0,0,0,0.85);
+      padding: 0 0 5px 0;
+      -o-transition:.2s;
+      -ms-transition:.2s;
+      -moz-transition:.2s;
+      -webkit-transition:.2s;
+      /* ...and now for the proper property */
+      transition:.2s;
+    }
+
+  }
+
+  /* "featured" and "other" sections */
+  &.work {
+    color: #bbb;
+    font-size: 15px;}
+
+  aside {
+    width: 25%;
+    color: #bbb;
+    font-size: 15px;
+    margin: 10px 0 0 0;
+  }
+
+}
+
+/* ---- featured project styles ---- */
+
+.project-wrapper {
+  max-width: 75%;
+  float: right;
+
+  a:hover {border: none;}
+}
+
+.featured-project {
+    width: 49%;
+    display: inline-table;
+    margin-bottom: 1rem;
+    padding: .7em;
+    border: 1px solid rgba(0, 0, 0, 0);
+    height: 275px;
+
+    /* links */
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.01);
+      -o-transition:.1s;
+      -ms-transition:.1s;
+      -moz-transition:.1s;
+      -webkit-transition:.1s;
+      /* ...and now for the proper property */
+      transition:.1s;
+    }
+
+    /* content */
+    .thumb {
+      height: 170px;
+      width: 100%;
+      background-color: #eee;
+      background-repeat: no-repeat;
+      background-size: 300px;
+      border: 0;
+      display:block;
+    }
+
+    .title {padding: 10px 0 0 0; font-family: "Tiempos Headline Light"}
+    .description {font-size: 13px; line-height: 1.5; color: #bbb}
+}
+
+    /* featured  links */
+    a .featured-project  {color: black; text-decoration: none;}
+
+
+
+/* ---- other work ---- */
+
+.tablelist{
+  width: 75%;
+  float: right;
+
+  /* links */
+  a {color: black; text-decoration: none;}
+  a:hover .title {color: red;}
+
+
+  /* row styles */
+  .project-row {
+    border-bottom: solid 1px #eee;
+    padding: 10px;
+      &:hover {background-color: rgba(0, 0, 0, 0.01);}
+      .title {display: inline-block; max-width: 70%;}
+      .date {display: inline-block; float: right; font-size: 13px; color: #bbb; font-family: "inconsolata", courier, monospace;}
+
+  }
+}
+
+
+/* ---- footer ---- */
+
+footer {
+  height: 70px;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  font-family: "inconsolata", courier, monospace;
+  line-height: 1.7;
+  margin: 0 0 20px 0;
+
+  a {color: gray; text-decoration: none;}
+  a:hover {color: gray; border-bottom: 1px dotted;}
+}
+
+/* ---- mobile styles ---- */
+
+@media (max-width:640px) {
+    section.intro {font-size: 25px; line-height: 1.6; margin: 40px 0 0 0; padding: 0 30px;}
+
+    section aside {display: block; width: auto; width: 100%;}
+    .project-wrapper {max-width: 100%; margin: 10px 0 0 0;}
+
+    .tablelist {width: 100%; margin: 10px 0 0 0;}
+}
+
+@media (max-width:500px) {
+    section.intro {font-size: 25px; line-height: 1.6;}
+    .section-wrapper {padding: 15px 10px;}
+    .featured-project {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0;
+
+      .featured-project-details {width: 50%; padding: 0 0 0 20px; float: right;}
+      .project-description {display: block; padding: 0 -10px 0 0;}
+      img {width: 50%;}
+      .thumb {width: 50%; display: inline-block;}
+    }
+}

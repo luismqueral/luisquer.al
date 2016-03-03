@@ -1,0 +1,74 @@
+/* ---- containers ---- */
+.project-contain {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  /* projects  */
+  .project-title {
+    font-size: 35px;
+    opacity: .9;
+    text-align: center;
+    margin: 50px auto 10px auto;
+    line-height: 1;
+    font-family: "Tiempos Headline", "Tiempos", Georgia, Times, Serif;
+  }
+
+  .project-title-img {
+      text-align:center;
+      margin: 15px auto 15px auto;
+      opacity: 1;
+  }
+
+  /* project links  */
+  .project-links {
+    text-align: center;
+    margin: 0 0 15px 0;
+    font-size: 15px;
+    font-family: "inconsolata", courier, monospace;
+  }
+  /* project description  */
+  .project-description {
+    max-width: 750px;
+    margin: 0 auto;
+    & h2 {
+      border-bottom: 0px solid rgba(0, 0, 0, 0.15);
+      margin: 45px 0 0 0;
+      font-family: "Tiempos Headline", "Tiempos", Georgia, Times, Serif;
+      font-weight: 100;
+    }
+
+    a {color: #338ea9; text-decoration: none;}
+  }
+
+  /* link back  */
+  .project-linkback {
+    text-align: center;
+    padding: 25px;
+    font-family: "inconsolata", courier, monospace;
+    font-size: 15px;
+    a {color: rgba(0, 0, 0, 0.45);}
+  }
+}
+
+/* ---- misc project styles ---- */
+
+/* drugs of craigslist */
+.project-title.drugs-of-craigslist {color: black; margin: 60px auto 30px auto; font-size: 60px; font-family: simsun;}
+.project-contain.drugs-of-craigslist {
+  max-width: 1000px;
+
+  .browser {margin: 30px auto;}
+}
+
+.project-title.gloves-of-new-york {font-size:40px; margin: 60px auto 30px auto; font-family: "inconsolata", monospace;}
+.project-contain.gloves-of-new-york {
+  max-width: 1000px;
+
+  .browser {margin: 30px auto;}
+}
+
+/* cafe internet */
+
+.project-title.cafe-internet {font-size: 70px; text-transform: uppercase; font-family: arial, sans-serif; font-weight: bold; font-style: italic;}
+.project-links.cafe-internet {font-family: "inconsolata", courier, monospace;}
